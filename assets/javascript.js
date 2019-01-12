@@ -1,5 +1,5 @@
 $("#buttons").on("click", function() {
-    var person = $(this).attr("#buttons");
+    person = $(this).attr("#buttons");
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
       person + "&api_key=ZuVJpVcHsX8GNFXpF70yxVoZIWklln69&limit=10";
 
@@ -18,14 +18,15 @@ $("#buttons").on("click", function() {
 
           var p = $("<p>").text("Rating: " + rating);
 
-          var gif = $("<img>");
-          gif.attr("src", results[i].images.fixed_height.url);
+          //var gif = $("<img>");
+          //gif.attr("src", results[i].images.fixed_height.url);
 
           var image = $("<img>");
           image.attr("src", results[i].images.fixed_height_small_still.url);
 
           gifDiv.prepend(p);
-          gifDiv.prepend(gif);
+          //gifDiv.prepend(gif);
+          gifDiv.prepend(image);
 
           $("#gifs-appear-here").prepend(gifDiv);
         }
@@ -36,8 +37,11 @@ $("#buttons").on("click", function() {
 
   for (var i=0; i<topics.length; i++) {
       var button = $("<button>" + topics[i] + "</button>")
+      button.attr("data-show", topics[i])
       $("#buttons").append(button);
-    }
+    };
+
+    var person = $(this).attr("data-show");
 //class code for animate and static gifs
 //$(".gif").on("click", function() {
     // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
