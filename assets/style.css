@@ -1,19 +1,11 @@
-img {
-width: 50%;
+body {
+    font-family: 'Inconsolata', monospace;
 }
 
-#buttons {
-    margin-left: 10px;
-}
-
-#submitButton {
-    margin-top: 5px;
-    margin-left: 10px;
-
-}
-
-#addCharacter {
+#logo {
     width: 50%;
-    margin-left: 10px;
 }
 
+.form-control {
+    width: 25%;
+}

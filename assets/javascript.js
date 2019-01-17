@@ -1,5 +1,19 @@
+$(document).ready(function() {
+
+var topics = ["Michael Bluth", "Gob Bluth", "Buster Bluth", "Lucille Bluth", "Lindsey Funke", "Tobias Funke"];
+//create buttons dynamically
+for (var i=0; i<topics.length; i++) {
+    var button = $("<button>");
+    button.attr("data-show", topics[i]);
+    button.attr("data-person", topics[i]);
+    button.text(topics[i]);
+    $("#buttons").append(button);
+  };
+
+
+//grab button clicked and search giphy for that character **NOT WORKING!!!!!!!
 $("#buttons").on("click", function() {
-    person = $(this).attr("#buttons");
+    var person = $(this).attr("data-person");
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
       person + "&api_key=ZuVJpVcHsX8GNFXpF70yxVoZIWklln69&limit=10";
 
@@ -33,15 +47,7 @@ $("#buttons").on("click", function() {
       });
   });
 
-  var topics = ["Michael Bluth", "Gob Bluth", "Buster Bluth", "Lucille Bluth", "Lindsey Funke", "Tobias Funke"]
 
-  for (var i=0; i<topics.length; i++) {
-      var button = $("<button>" + topics[i] + "</button>")
-      button.attr("data-show", topics[i])
-      $("#buttons").append(button);
-    };
-
-    var person = $(this).attr("data-show");
 //class code for animate and static gifs
 //$(".gif").on("click", function() {
     // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
@@ -57,3 +63,6 @@ $("#buttons").on("click", function() {
 //      $(this).attr("data-state", "still");
 //    }
 //  });
+
+
+  });
