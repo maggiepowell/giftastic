@@ -14,6 +14,9 @@ for (var i=0; i<topics.length; i++) {
 //grab button clicked and search giphy for that character **NOT WORKING!!!!!!!
 $("#buttons").on("click", function() {
     var person = $(this).attr("data-person");
+    console.log($(this));
+    console.log($(this)[0]);   
+    console.log(person);
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
       person + "&api_key=ZuVJpVcHsX8GNFXpF70yxVoZIWklln69&limit=10";
 

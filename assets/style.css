@@ -1,11 +1,25 @@
 body {
     font-family: 'Inconsolata', monospace;
+    background-image: url("images/frozenBanana.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right;
+    margin-left: 50px;
 }
 
 #logo {
-    width: 50%;
+    width: 25%;
 }
 
 .form-control {
     width: 25%;
+}
+
+#gifs-appear-here {
+    flex-direction: row;
+    justify-content: center;
+}
+
+#buttons {
+    margin: 20px;
 }
