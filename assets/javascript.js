@@ -12,7 +12,7 @@ for (var i=0; i<topics.length; i++) {
 
 
 //grab button clicked and search giphy for that character **NOT WORKING!!!!!!!
-$("#buttons").on("click", function() {
+$("button").on("click", function() {
     var person = $(this).attr("data-person");
     console.log($(this));
     console.log($(this)[0]);   
