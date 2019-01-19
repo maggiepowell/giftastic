@@ -11,7 +11,7 @@ for (var i=0; i<topics.length; i++) {
   };
 
 
-//grab button clicked and search giphy for that character **NOT WORKING!!!!!!!
+//grab button clicked and search giphy for that character 
 $("button").on("click", function() {
     var person = $(this).attr("data-person");
     console.log($(this));
@@ -51,10 +51,9 @@ $("button").on("click", function() {
 
 //code for animated and static gifs
 $("#gifs-appear-here").on("click", function() {
-    var state = $(this).attr("data-state");
-    console.log(this);
-// If the clicked image's state is still, update its src attribute to what its data-animate value is.
-
+    var state = $(this)[0].dataset.state;
+    console.log($(this)[0]);
+    // If the clicked image's state is still, update its src attribute to what its data-animate value is.
     if (state === "still") {
       $(this).attr("src", $(this).attr("data-animate"));
       $(this).attr("data-state", "animate");

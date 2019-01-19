@@ -5,12 +5,16 @@ body {
 }
 
 .logo {
-    width: 70%;
+    width: 50%;
 }
 
-.form-control {
-    width: 35%;
-    
+.header{
+    position: sticky;
+    margin-bottom: 10px;
+}
+
+#addCharacter {
+margin-bottom: 10px;    
 }
 
 #gifs-appear-here {
@@ -19,7 +23,7 @@ body {
 }
 
 #buttons {
-    margin: 20px;
+    padding: 20px;
 }
 
 img {
@@ -27,8 +31,7 @@ img {
     margin-right: 5px;
 }
 
-.footer {
-    position: fixed;
-    width: 50%;
-    bottom: 0;
+#footerImage {
+    width: 60%;
+    height: 60%;
 }
