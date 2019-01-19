@@ -11,6 +11,8 @@ body {
 .header{
     position: sticky;
     margin-bottom: 10px;
+    font-size: 48px;
+    font-weight: bold;
 }
 
 #addCharacter {
@@ -20,6 +22,7 @@ margin-bottom: 10px;
 #gifs-appear-here {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 10px;
 }
 
 #buttons {
@@ -34,4 +37,6 @@ img {
 #footerImage {
     width: 60%;
     height: 60%;
+    position: sticky;
+    bottom: 0;
 }

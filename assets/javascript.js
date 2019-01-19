@@ -51,9 +51,11 @@ $("button").on("click", function() {
 
 //code for animated and static gifs
 $("#gifs-appear-here").on("click", function() {
+  console.log(typeof $(this));
     var state = $(this)[0].dataset.state;
     console.log($(this)[0]);
-    // If the clicked image's state is still, update its src attribute to what its data-animate value is.
+    console.log(state);
+    // If the clicked image's state is still, update its src attribute to its data-animate value.
     if (state === "still") {
       $(this).attr("src", $(this).attr("data-animate"));
       $(this).attr("data-state", "animate");
@@ -65,3 +67,6 @@ $("#gifs-appear-here").on("click", function() {
 
 
   });
+
+  //gif images loading and when clicked data-state updates from still to animate but gif doesn't play
+
